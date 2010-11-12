@@ -29,6 +29,20 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 		<property name="username" value="${database.user}" />
 		<property name="password" value="${database.password}" />
 	</bean>
+	
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+
+		<property name="prefix">
+			<value>/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+		<property name="order">
+	        <value>0</value>
+	    </property>
+	</bean>
 
 	  <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
@@ -37,6 +51,12 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 			<value>orion.core.models.Skill</value>
 			<value>orion.core.models.User</value>
 			<value>orion.core.models.Space</value>
+			<value>orion.core.models.Login</value>
+			<value>orion.core.models.OnlineUser</value>
+			<value>orion.core.models.Profile</value>
+			<value>orion.core.models.QuestionAnswered</value>
+			<value>orion.core.models.Rating</value>
+			<value>orion.core.models.UserSkills</value>
 		</list>
 		</property>
 			<property name="hibernateProperties">
