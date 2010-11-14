@@ -1,0 +1,62 @@
+[1mdiff --git a/bin/orion/core/models/Skill.class b/bin/orion/core/models/Skill.class[m
+[1mdeleted file mode 100644[m
+[1mindex e9195d8..0000000[m
+Binary files a/bin/orion/core/models/Skill.class and /dev/null differ
+[1mdiff --git a/bin/orion/core/models/Space.class b/bin/orion/core/models/Space.class[m
+[1mdeleted file mode 100644[m
+[1mindex 5fa204d..0000000[m
+Binary files a/bin/orion/core/models/Space.class and /dev/null differ
+[1mdiff --git a/bin/orion/core/models/User.class b/bin/orion/core/models/User.class[m
+[1mdeleted file mode 100644[m
+[1mindex 5ce391a..0000000[m
+Binary files a/bin/orion/core/models/User.class and /dev/null differ
+[1mdiff --git a/bin/orion/core/models/util/HibernateUtil.class b/bin/orion/core/models/util/HibernateUtil.class[m
+[1mdeleted file mode 100644[m
+[1mindex 29e56d1..0000000[m
+Binary files a/bin/orion/core/models/util/HibernateUtil.class and /dev/null differ
+[1mdiff --git a/bin/orion/web/controllers/UserRegistrationController.class b/bin/orion/web/controllers/UserRegistrationController.class[m
+[1mdeleted file mode 100644[m
+[1mindex 8592533..0000000[m
+Binary files a/bin/orion/web/controllers/UserRegistrationController.class and /dev/null differ
+[1mdiff --git a/bin/orion/web/helpers/UrlRoutingHelper.class b/bin/orion/web/helpers/UrlRoutingHelper.class[m
+[1mdeleted file mode 100644[m
+[1mindex 2079b0b..0000000[m
+Binary files a/bin/orion/web/helpers/UrlRoutingHelper.class and /dev/null differ
+[1mdiff --git a/war/WEB-INF/classes/jdbc.properties b/war/WEB-INF/classes/jdbc.properties[m
+[1mdeleted file mode 100644[m
+[1mindex 49b7275..0000000[m
+[1m--- a/war/WEB-INF/classes/jdbc.properties[m
+[1m+++ /dev/null[m
+[36m@@ -1,7 +0,0 @@[m
+[31m-database.driver=com.mysql.jdbc.Driver[m
+[31m-database.url=jdbc:mysql://localhost:3306/orion[m
+[31m-database.user=root[m
+[31m-database.password=gh[m
+[31m-hibernate.dialect=org.hibernate.dialect.MySQL5Dialect[m
+[31m-hibernate.show_sql=true[m
+[31m-hibernate.hbm2ddl.auto=create[m
+\ No newline at end of file[m
+[1mdiff --git a/war/WEB-INF/classes/orion/core/models/Skill.class b/war/WEB-INF/classes/orion/core/models/Skill.class[m
+[1mdeleted file mode 100644[m
+[1mindex b39caa8..0000000[m
+Binary files a/war/WEB-INF/classes/orion/core/models/Skill.class and /dev/null differ
+[1mdiff --git a/war/WEB-INF/classes/orion/core/models/Space.class b/war/WEB-INF/classes/orion/core/models/Space.class[m
+[1mdeleted file mode 100644[m
+[1mindex c00a0ee..0000000[m
+Binary files a/war/WEB-INF/classes/orion/core/models/Space.class and /dev/null differ
+[1mdiff --git a/war/WEB-INF/classes/orion/core/models/User.class b/war/WEB-INF/classes/orion/core/models/User.class[m
+[1mdeleted file mode 100644[m
+[1mindex b8e58d1..0000000[m
+Binary files a/war/WEB-INF/classes/orion/core/models/User.class and /dev/null differ
+[1mdiff --git a/war/WEB-INF/classes/orion/core/models/util/HibernateUtil.class b/war/WEB-INF/classes/orion/core/models/util/HibernateUtil.class[m
+[1mdeleted file mode 100644[m
+[1mindex 58fe7af..0000000[m
+Binary files a/war/WEB-INF/classes/orion/core/models/util/HibernateUtil.class and /dev/null differ
+[1mdiff --git a/war/WEB-INF/classes/orion/web/controllers/UserRegistrationController.class b/war/WEB-INF/classes/orion/web/controllers/UserRegistrationController.class[m
+[1mdeleted file mode 100644[m
+[1mindex 943a7dc..0000000[m
+Binary files a/war/WEB-INF/classes/orion/web/controllers/UserRegistrationController.class and /dev/null differ
+[1mdiff --git a/war/WEB-INF/classes/orion/web/helpers/UrlRoutingHelper.class b/war/WEB-INF/classes/orion/web/helpers/UrlRoutingHelper.class[m
+[1mdeleted file mode 100644[m
+[1mindex 1f8ee53..0000000[m
+Binary files a/war/WEB-INF/classes/orion/web/helpers/UrlRoutingHelper.class and /dev/null differ
