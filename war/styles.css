@@ -1,0 +1,290 @@
+/*
+Design by Metamorphosis Design
+http://www.metamorphozis.com
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+*
+{
+border: 0;
+margin: 0;
+}
+
+img
+{
+border: 0px;
+}
+
+body{
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #000000;
+	line-height: 20px;
+	background-color: #FFF;
+	background-image: url(images/bg.jpg);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+#foot_bg {
+	width: 100%;
+	height: 100%;
+	}
+	
+#main {
+	width: 783px;
+	margin: 0px 0px;}
+
+
+#logo {	
+		height: 241px;
+		width: 200px;
+		background: url(images/big_img.jpg) left top no-repeat;
+		padding: 44px 0px 0px 768px;
+}
+
+#logo H2 {
+
+		font-family: Arial, Helvetica, sans-serif;
+		color:#FFFFFF;
+		font-size:18px;
+		font-style:italic;
+		}
+
+#logo a {
+	text-decoration: none;
+	text-transform: lowercase;
+	font-style: italic;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+	
+#logo H2 a{
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform: none;
+	font-weight:100;
+}
+
+
+
+#buttons a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	display: block;
+	float: left;
+	text-decoration: none;
+	color: #FFFFFF;
+	text-align: center;
+	padding-top: 11px;
+	height: 20px;
+}
+
+.but {
+	width: 153px;
+	background: url(images/but.png) left top no-repeat;
+}
+#buttons .but:hover {
+	background:url(images/but_hover.jpg) center 1px no-repeat;}
+
+#content{
+	
+	width: 983px;
+	background: url(images/cont_razd.gif) 296px 0px repeat-y;
+}
+
+#left{
+	width: 314px;
+	float: left;
+	color:#000000;
+	margin-left: 16px;
+}
+
+.box_bg {
+		font-size: 12px;
+		background:url(images/box_bg.gif) left repeat-y;
+}
+
+.munth_box {
+	padding: 3px 15px 0px 39px;
+	background: url(images/fish_left.gif) 6px 7px no-repeat;
+}
+
+.box { 
+	width: 314px;
+}
+
+.box_bot {
+		height: 9px;
+		background:url(images/box_bot.png) left bottom no-repeat;
+		width: 314px;}
+		
+.box_top {
+		height: 9px;
+		background: url(images/box_top.png) left top no-repeat;
+		width: 314px;}
+
+.text{
+	padding: 10px 0px 10px 0px;
+	line-height: 18px;
+	background-color: #FFF;
+}
+
+
+
+.img_l {	float:left;
+		margin: 3px 15px 3px 0px;
+}
+
+.img_r {	float: right;
+		margin: 3px 6px 3px 10px;
+}
+
+span {	color:#496A2D;
+	font-size:12px;
+	font-weight:bold;
+}
+
+#left H1{
+	font-family: "Times New Roman", Times, serif;
+	font-size:18px;
+	font-weight: 100;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 15px 0px 20px 0px;
+	background: url(images/tit_left.png) left top no-repeat;
+}
+
+#right H1{
+	font-family: "Times New Roman", Times, serif;
+	font-size:18px;
+	font-weight: 100;
+	color: #496A2D;
+	text-align:left;
+	padding: 5px 0px 4px 2px;
+	background: url(images/tit_right.gif) bottom repeat-x;
+}
+
+.read{
+	text-align:right;
+	padding-right:5px;
+	padding-top: 5px;
+}
+
+.read a {
+	font-weight:bold;
+	font-size:12px;
+	color: #4A7F0F;
+	text-decoration:underline;
+}
+
+.read a:hover {
+	font-weight:bold;
+	font-size:12px;
+	color: #4A7F0F;
+	text-decoration: none;
+}
+
+.read_l{
+	text-align:right;
+	padding-right:5px;
+	padding-top: 5px;
+	padding-bottom: 3px;
+	background: url(images/but_read.gif) 190px 6px no-repeat;
+}
+
+.read_l a {
+	font-size:12px;
+	color: #ffffff;
+	text-decoration: none;
+	padding-right: 2px;
+	
+}
+
+.read_l a:hover {
+	font-size:12px;
+	color: #000000;
+	text-decoration: none;
+}
+
+#right{
+	float: right;
+	width: 641px;
+	padding: 0px 0px 0px 0px;
+}
+
+#right_top{
+	width: 641px;
+	height: 10px;
+	background: url(images/right_top.png) left top no-repeat;
+}
+#right_bot{
+	width: 641px;
+	height: 10px;
+	background: url(images/right_bot.png) left bottom no-repeat;
+}
+#right_bg{
+	background: url(images/right_bg.gif) left repeat-y;
+	padding: 0px 0px 0px 0px;
+	
+}
+
+.galery {padding: 25px 0px 10px 12px;
+	height: 82px;}
+.razd_g {
+	float:left;
+	background:url(images/razd_g.gif) 15px 0px repeat-y;
+	width: 31px;
+	height: 82px;}
+.img_g {
+	float:left;
+}
+
+
+#footer{
+	height: 50px;
+	font-size: 12px;
+	color: #ffffff;
+	text-align: center;
+	padding: 25px 0px 0px 0px;
+	background: url(images/footer.jpg) 0px 8px  no-repeat;
+}
+
+#footer a{
+	color: #ffffff;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+#footer a:hover{
+	color: #ffffff;
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+.left_res
+{
+width: 50%;
+float: left;
+}
+
+.left_res a
+{
+color: #4E6E33;
+font-weight: bold;
+}
+
+.right_res
+{
+float: right;
+width: 50%;
+}
+
+.right_res a
+{
+color: #4E6E33;
+font-weight: bold;
+}
+
+ul{
+color: #4E6E33;
+}
