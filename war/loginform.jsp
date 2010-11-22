@@ -8,7 +8,7 @@
 <title>Login</title>
 </head>
 <body>
-<h3>Login Form</h3>
+<h3>Login</h3>
 
 <form action="loginform.htm" method="post"  >
 	<table>
