@@ -13,8 +13,7 @@
             <include name="*.jar"/>
         </fileset>
         <!-- We need the servlet API classes: -->
-        <!--  * for Tomcat 5/6 use servlet-api.jar -->
-        <!--  * for other app servers - check the docs -->
+        <!--  * for Tomcat 5/6 servlet-api.jar -->
         <fileset dir="${appserver.lib}">
             <include name="servlet*.jar"/>
         </fileset>
@@ -31,8 +30,6 @@
         <echo message="build     --> Build the application"/>
         <echo message="deploy    --> Deploy application as directory"/>
         <echo message="deploywar --> Deploy application as a WAR file"/>
-        <echo message="install   --> Install application in Tomcat"/>
-        <echo message="reload    --> Reload application in Tomcat"/>
         <echo message="start     --> Start Tomcat application"/>
         <echo message="stop      --> Stop Tomcat application"/>
         <echo message="list      --> List Tomcat applications"/>
