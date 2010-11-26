@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 
-import orion.logic.PostQuestionService;
+import orion.service.PostQuestionService;
 
 
 

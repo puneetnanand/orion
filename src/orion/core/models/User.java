@@ -1,7 +1,6 @@
 package orion.core.models;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,53 +8,68 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "user")
+@Table (name = "user",
+	   uniqueConstraints = {@UniqueConstraint(columnNames={"username"})}
+)
 public class User implements Serializable {
+
+	private static final long serialVersionUID = 1;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name = "id")
+	@Column(name = "id", length=25)
 	private long id;
-	
-	@Column(name = "emailId", nullable = false)
-	private String emailId;
-	
+
+	@Column(name = "username", length=10)
+	private String userName;
+
 	@Column(name = "password", nullable = false)
 	private String password;
 	
-	@Column(name = "profession", nullable = false)
-	private String profession;
-	//private List<Skill> skills = null;
+	@Column(name = "firstname", nullable = false, length=20)
+	private String firstname;
 	
-	// Constructors
-
-	public User() {
-	}
+	@Column(name = "lastname", nullable = false, length=20)
+	private String lastname;
 	
-	public User(String emailId, String password, String profession, List<Skill> skills) {
-		this.emailId = emailId;
-		this.password = password;
-		this.profession = profession;
-		//this.skills = skills;
-	}
-	
-	// Getters and Setters
-	public long getId() {
-		return id;
+	@Column(name = "email", nullable = false, length=30)
+	private String email;
+
+	public String getFirstname() {
+		return firstname;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
 
-	public String getEmailId() {
-		return emailId;
+	public String getLastname() {
+		return lastname;
 	}
 
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassword() {
@@ -66,12 +80,14 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-	public String getProfession() {
-		return profession;
+	public long getId() {
+		return id;
 	}
 
-	public void setProfession(String profession) {
-		this.profession = profession;
+	public void setId(long id) {
+		this.id = id;
+	}
+	public User() {		
 	}
 	
 }

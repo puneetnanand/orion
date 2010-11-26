@@ -3,15 +3,12 @@ package orion.web.controllers;
 import java.util.Map;
 import javax.validation.Valid;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import orion.core.models.ValidationForm;
-
-
 
 @Controller
 @RequestMapping("/validationform.html")

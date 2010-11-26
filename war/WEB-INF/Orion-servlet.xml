@@ -48,16 +48,12 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 		<property name="dataSource" ref="dataSource" />
 		<property name="annotatedClasses">
 		<list>
-			<value>orion.core.models.Skill</value>
+			<value>orion.core.models.Question</value>
 			<value>orion.core.models.User</value>
 			<value>orion.core.models.Space</value>
-			<value>orion.core.models.Login</value>
-			<value>orion.core.models.OnlineUser</value>
-			<value>orion.core.models.Profile</value>
-			<value>orion.core.models.QuestionAnswered</value>
+			<value>orion.core.models.UserSkill</value>
+			<value>orion.core.models.Question</value>
 			<value>orion.core.models.Rating</value>
-			<value>orion.core.models.UserSkills</value>
-			<value>orion.core.models.PostQuestion</value>
 		</list>
 		</property>
 			<property name="hibernateProperties">

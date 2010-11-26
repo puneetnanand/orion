@@ -15,7 +15,6 @@ import orion.core.models.util.HibernateUtil;
 import java.io.IOException;
 import java.util.Date;
 
-@Controller
 public class UserRegistrationController{
 
     protected final Log logger = LogFactory.getLog(getClass());
