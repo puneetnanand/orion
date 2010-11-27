@@ -5,26 +5,29 @@ import java.util.HashSet;
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import orion.core.models.User;
+import orion.dao.UserDao;
+import orion.dao.impl.UserDaoImpl;
 
-public final class UsersManagementUtil {
+public class UsersManagementUtil {
 	
-	@Autowired
-	private static SessionFactory sessionFactory;
 	private static HashSet<Long> set = new HashSet<Long>();    
-	
-	public void setSessionFactory(SessionFactory sessionFactory) {
-		this.sessionFactory=sessionFactory;
-	}
-	
+		
 	public static boolean registerUserOnline (long userId) {
 		return set.add(userId);
 	}
-	
-	public static boolean registerUserOnline (String userName) {
+
+	public boolean registerUserOnline (String userName) {
 		try {
-			User user = (User)sessionFactory.getCurrentSession().createQuery("from User where username='"+userName+"'").uniqueResult();
+			UserDao userDao = new UserDaoImpl();
+			System.out.println("userName - "+userName);
+			User user = (User)userDao.getUser(userName);
+			System.out.println("printing email - "+user.getEmail());
 			return set.add(user.getId());
 		} catch (HibernateException e) {
 			e.printStackTrace();
@@ -42,4 +45,5 @@ public final class UsersManagementUtil {
 	public static boolean checkUserOnline (long userId) {
 		return set.contains(userId);
 	}
+
 }

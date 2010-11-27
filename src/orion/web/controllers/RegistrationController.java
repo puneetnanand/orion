@@ -16,19 +16,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import orion.core.models.Registration;
-import orion.service.UserService;
+import orion.dao.impl.UserDaoImpl;
 
 @Controller
 public class RegistrationController {
-
-	@Autowired
-	UserService userService;
-	@Autowired
-	private RegistrationValidation registrationValidation;
-
-	public void setRegistrationValidation (RegistrationValidation registrationValidation) {
-		this.registrationValidation = registrationValidation;
-	}
 
 	// Display the form on get request
 	@RequestMapping(value = "/registrationform", method = RequestMethod.GET)
@@ -59,7 +50,7 @@ public class RegistrationController {
 			reg.setSkills(skills);
 			reg.setExperience(exp);
 
-			boolean status = userService.createUser(reg);
+			boolean status = new UserDaoImpl().createUser(reg);
 			model.addAttribute("result", status);
 			return "registrationsuccess";
 		} else {

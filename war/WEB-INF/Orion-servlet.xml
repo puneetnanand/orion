@@ -15,7 +15,10 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 	<!-- Enable annotation driven controllers, validation etc... -->
 	
 	<context:property-placeholder location="classpath:jdbc.properties" />
-	<context:component-scan base-package="orion" />
+<!--	<context:annotation-config />-->
+	<context:component-scan base-package="orion" use-default-filters="true" >
+		 <context:include-filter type="regex" expression=".*Controller" />
+	</context:component-scan>
 	<tx:annotation-driven transaction-manager="hibernateTransactionManager" />
 
 	<bean id="messageSource"
@@ -44,7 +47,7 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 	    </property>
 	</bean>
 
-	  <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="annotatedClasses">
 		<list>
@@ -62,6 +65,8 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
 				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
 				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.current_session_context_class">thread</prop>
+				<prop key="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</prop> 
 			</props>
 			</property>
 	</bean>
@@ -69,5 +74,4 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 	<bean id="hibernateTransactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-	
 </beans>

@@ -13,23 +13,20 @@ import orion.core.models.User;
 import orion.core.models.UserSkill;
 import orion.core.models.util.UsersManagementUtil;
 import orion.dao.UserDao;
+import orion.web.helpers.SpringContextHelper;
 
-@Repository("UserDao")
-@Transactional(readOnly = false)
 public class UserDaoImpl implements UserDao {
 
-	@Autowired
-	private SessionFactory sessionFactory;
-
-	public void setSessionFactory(SessionFactory sessionFactory) {
-		this.sessionFactory = sessionFactory;
-	}
+	private static SessionFactory sessionFactory = (SessionFactory)SpringContextHelper.getBean("sessionFactory");
 
 	public boolean checkLogin(String username, String password) {
 		try {
-			User user = (User) sessionFactory.getCurrentSession()
+			Session session = sessionFactory.getCurrentSession();
+			Transaction tx = session.beginTransaction();
+			User user = (User) session
 					.createQuery("from User where username='" + username + "'")
 					.uniqueResult();
+			tx.commit();
 			UsersManagementUtil.registerUserOnline(user.getId());
 			return true;
 		} catch (NullPointerException nE) {
@@ -41,6 +38,13 @@ public class UserDaoImpl implements UserDao {
 		}
 	}
 
+	public User getUser(String userName) {
+		Session session = sessionFactory.getCurrentSession();
+		Transaction tx = session.beginTransaction();
+		User user = (User)session.createQuery("from User where username='"+userName+"'").uniqueResult();
+		return user;
+	}
+	
 	public boolean createUser(Registration reg) {
 		if (doesUserNameExist(reg.getUserName())) {
 			// Username already in use
