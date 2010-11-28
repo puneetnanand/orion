@@ -115,8 +115,6 @@ body{
  <script type="text/javascript">
 	$(document).ready(function() { 
 		$('#question').elastic();
-		var formOptions = {target: '#result'};
-		$('#postquestion').ajaxForm(formOptions);
 	});
 </script>
 </head>
@@ -140,15 +138,13 @@ body{
 <div id="at-content">
     <h3 align="left"> Question</h3>
 
-        <form name="postquestion" id="postquestion" action="postquestion.do?username=${username}" method="POST">
-        <table>
-        <tr><td>Enter your question:</td></tr>
-		<tr><td><textarea id="question" style="color: black; background-color: #348A9E" name="question" cols="70" >
-              </textarea></td>
-		</tr>
-		<tr><td><input type="submit" id="submit"/></td></tr>
-        </table>
+        <form name="postquestion" id="postquestion" action="postquestion.htm?username=${username}" method="POST">
+        Enter your question:
+		<textarea id="question" style="color: black; background-color: #348A9E" name="question" >
+        </textarea>
+        <input type="submit" id="submit"/>
         </form>
+        
 </div>
 <div id="result">
 </div>
